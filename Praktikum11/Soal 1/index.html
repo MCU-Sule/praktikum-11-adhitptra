@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="author" content="Adhitya PPT 2172024">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+</head>
+<style>
+    body {
+        background-color: rgb(252, 152, 118);
+    }
+    #kata {
+        text-align: center;
+        margin-top: 23%;
+        font-family: arial;
+    }
+    #speed {
+        background-color: rgb(252, 152, 118);
+        width: 150px;
+        height: 100px;
+        margin: auto;
+    }
+</style>
+<body>
+    <h1 id="kata"></h1>
+    <div id="speed">
+        <input type="number" id="boxSpeed" min="1" max="10" onclick="animasi()">
+    </div>
+<script>
+    function animasi() {
+        let text = "We Love Programming!"
+        let speed1 = document.getElementById("boxSpeed").value;
+        for(let a=1; a<=text.length; a++){
+
+        setTimeout (function(){
+            document.querySelector("#kata").innerHTML=text.slice(0,a)    
+        },300*a /speed1)
+    }}
+    </script>
+</body>
+</html>
